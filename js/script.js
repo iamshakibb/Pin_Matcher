@@ -79,8 +79,15 @@ function checkingTheNumber() {
     } else {
       notify(false);
     }
+  } else if (userInputShow.value.length === 0) {
+    errorMessage(`Input box is empty.Enter C for clenning`);
   } else {
-    userInputShow.value = `Enter 4 digit number. Enter C for clearing`;
+    errorMessage(`Enter 4 digit number. Enter C for clenning`);
+  }
+
+  //function for error message
+  function errorMessage(message) {
+    userInputShow.value = message;
     userInputShow.classList.add("error");
   }
 
