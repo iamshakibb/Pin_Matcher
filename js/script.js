@@ -104,3 +104,11 @@ function checkingTheNumber() {
     submitBtn.classList.add("disable_btn");
   }
 }
+
+// windows reload and input and output value erase
+window.onload = () => {
+  let userInputShow = document.querySelector(".user_input_show");
+  const randomNumberOutput = document.querySelector(".random_number_output");
+  userInputShow.value = "";
+  randomNumberOutput.value = "";
+};
