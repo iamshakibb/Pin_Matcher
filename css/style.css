@@ -181,6 +181,7 @@ input[type="text"]:focus {
 .disable_btn {
   cursor: not-allowed;
   background-color: rgb(229, 229, 229) !important;
+  color: #2c2c2cad;
 }
 
 .disable_btn:hover::after {
