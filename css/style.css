@@ -118,11 +118,12 @@ input[type="text"]:focus {
 }
 
 .button::after {
-  transform: translateY(-90%);
+  transform: translateX(-90%);
+  transition: 200ms ease;
 }
 
 .button:hover::after {
-  transform: translateY(0%);
+  transform: translateX(0%);
   opacity: 1;
 }
 .blink-me {
@@ -179,7 +180,6 @@ input[type="text"]:focus {
 }
 
 .disable_btn {
-  cursor: not-allowed;
   background-color: rgb(229, 229, 229) !important;
   color: #2c2c2cad;
 }
