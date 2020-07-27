@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Matcher </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input class="form-control random_number_output" type="text">
+                    <button class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input class="form-control user_input_show" type="text">
+                    <div class="numbers">
+                        <div class="calc-body">
+                            <div class="calc-button-row">
+                              <div class="button number_btn">7</div>
+                              <div class="button number_btn">8</div>
+                              <div class="button number_btn">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button number_btn">4</div>
+                              <div class="button number_btn">5</div>
+                              <div class="button number_btn">6</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button number_btn">1</div>
+                              <div class="button number_btn">2</div>
+                              <div class="button number_btn">3</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button delete"><</div>
+                                <div class="button number_btn">0</div>
+                                <div class="button clear">C</div>
+                            </div>
+                            <div>
+                                <button type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left try_message"><span id="try_count"> 3 </span> try left</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notify-section">
+            <p class="notify not_match">❌ Pin Didn't Match, Please try again</p>
+            <p class="notify match">✅ Pin Matched... Secret door is opening for you</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
