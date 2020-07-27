@@ -102,6 +102,7 @@ function checkingTheNumber() {
     tryCount.innerText = 0;
     tryMessage.style.color = "red";
     submitBtn.classList.add("disable_btn");
+    submitBtn.setAttribute("disabled", "disabled");
   }
 }
 
