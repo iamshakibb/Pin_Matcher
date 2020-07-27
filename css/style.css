@@ -190,4 +190,5 @@ input[type="text"]:focus {
 
 .try_message {
   color: green;
+  font-size: 18px;
 }
