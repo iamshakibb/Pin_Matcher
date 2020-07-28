@@ -13,14 +13,18 @@ function generateRandomNumber() {
   return randomNumber;
 }
 
-//Disable notify message  section
+//Disable notify message  section and worng message section
 const match = document.querySelector(".match");
 const notMatch = document.querySelector(".not_match");
-disableNotify();
-//function for disable notify message all
-function disableNotify() {
+const emptyMessage = document.querySelector(".empty_message");
+const digitMessage = document.querySelector(".digit_message");
+disablemessage();
+//function for disable notify message and worng message all
+function disablemessage() {
   match.style.display = "none";
   notMatch.style.display = "none";
+  emptyMessage.style.display = "none";
+  digitMessage.style.display = "none";
 }
 
 //function for notify disable according to pin match
@@ -55,7 +59,7 @@ clearBtn.addEventListener("click", () => {
   userInputShow.value = "";
   userInputShow.classList.remove("error");
   userInputShow.classList.add("default_input_style");
-  disableNotify();
+  disablemessage();
 });
 
 //delete a number from user input
@@ -63,7 +67,7 @@ const deleteBtn = document.querySelector(".delete");
 deleteBtn.addEventListener("click", () => {
   let userInputShow = document.querySelector(".user_input_show");
   userInputShow.value = userInputShow.value.slice(0, -1);
-  disableNotify();
+  disablemessage();
 });
 
 //check is pin number match
@@ -80,15 +84,18 @@ function checkingTheNumber() {
       notify(false);
     }
   } else if (userInputShow.value.length === 0) {
-    errorMessage(`Input box is empty.Enter C for clenning`);
+    wrongMessage(true);
   } else {
-    errorMessage(`Enter 4 digit number. Enter C for clenning`);
+    wrongMessage(false);
   }
 
-  //function for error message
-  function errorMessage(message) {
-    userInputShow.value = message;
-    userInputShow.classList.add("error");
+  //function for wrong message
+  function wrongMessage(message) {
+    if (message === true) {
+      emptyMessage.style.display = "block";
+    } else {
+      digitMessage.style.display = "block";
+    }
   }
 
   // try counter message

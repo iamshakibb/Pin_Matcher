@@ -6,7 +6,7 @@ body {
   height: 95vh;
 }
 .container {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 /*common css*/
@@ -31,6 +31,7 @@ body {
   background: #222436;
   padding: 30px;
   text-align: center;
+  margin-top: 5px;
 }
 .generate-btn {
   margin-top: 140px;
@@ -151,18 +152,26 @@ input[type="text"]:focus {
   transform: translateX(0%);
   opacity: 1;
 }
-.notify {
+.notify,
+.wrong {
   color: #fff;
   text-align: center;
   margin: 0 auto;
   background: #222436;
-  margin-top: 20px;
+  margin-top: 5px;
   border-radius: 15px;
   padding: 5px 20px;
 }
-.notify-section {
-  width: 35%;
+
+.notify-section,
+.wrong-section {
+  width: 38%;
   margin: 0 auto;
+  height: 35px;
+}
+.wrong-section {
+  padding-bottom: 20px;
+  margin-top: -5px;
 }
 .action-left {
   color: #ff3c5f;
