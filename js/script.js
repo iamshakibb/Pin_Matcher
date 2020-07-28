@@ -19,6 +19,7 @@ const notMatch = document.querySelector(".not_match");
 const emptyMessage = document.querySelector(".empty_message");
 const digitMessage = document.querySelector(".digit_message");
 disablemessage();
+
 //function for disable notify message and worng message all
 function disablemessage() {
   match.style.display = "none";
@@ -27,7 +28,7 @@ function disablemessage() {
   digitMessage.style.display = "none";
 }
 
-//function for notify disable according to pin match
+//function for notify message disable according to pin match
 function notify(isitmatch) {
   if (isitmatch === true) {
     match.style.display = "block";
@@ -57,8 +58,6 @@ const clearBtn = document.querySelector(".clear");
 clearBtn.addEventListener("click", () => {
   let userInputShow = document.querySelector(".user_input_show");
   userInputShow.value = "";
-  userInputShow.classList.remove("error");
-  userInputShow.classList.add("default_input_style");
   disablemessage();
 });
 
@@ -89,15 +88,6 @@ function checkingTheNumber() {
     wrongMessage(false);
   }
 
-  //function for wrong message
-  function wrongMessage(message) {
-    if (message === true) {
-      emptyMessage.style.display = "block";
-    } else {
-      digitMessage.style.display = "block";
-    }
-  }
-
   // try counter message
   const tryMessage = document.querySelector(".try_message");
   let tryCount = document.getElementById("try_count");
@@ -110,6 +100,15 @@ function checkingTheNumber() {
     tryMessage.style.color = "red";
     submitBtn.classList.add("disable_btn");
     submitBtn.setAttribute("disabled", "disabled");
+  }
+}
+
+//function for wrong message
+function wrongMessage(message) {
+  if (message === true) {
+    emptyMessage.style.display = "block";
+  } else {
+    digitMessage.style.display = "block";
   }
 }
 
