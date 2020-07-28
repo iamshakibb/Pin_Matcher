@@ -179,16 +179,6 @@ input[type="text"]:focus {
 }
 
 /*css style that are used in js*/
-.error {
-  font-size: 16px !important;
-  color: red !important;
-}
-
-.default_input_style {
-  font-size: 25px;
-  color: #fff;
-}
-
 .disable_btn {
   background-color: rgb(229, 229, 229) !important;
   color: #2c2c2cad;
