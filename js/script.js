@@ -107,8 +107,10 @@ function checkingTheNumber() {
 function wrongMessage(message) {
   if (message === true) {
     emptyMessage.style.display = "block";
+    digitMessage.style.display = "none";
   } else {
     digitMessage.style.display = "block";
+    emptyMessage.style.display = "none";
   }
 }
 
